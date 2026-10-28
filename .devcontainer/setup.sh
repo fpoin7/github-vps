@@ -9,10 +9,11 @@ apt-get update || echo "PERINGATAN: apt update gagal, lanjut ke instalasi."
 
 echo "== Instal tool inti =="
 # Daftar inti dari repo asli, tanpa paket GUI/berat (zaproxy, wireshark GUI, kismet).
-# Jika satu paket tidak tersedia di Kali rolling, instalasi paket lain tetap jalan.
+# neofetch DIHAPUS 2026-10-28: terbukti tidak tersedia di Kali Rolling 2026.3 dan
+# satu paket yang hilang membatalkan seluruh transaksi apt, sehingga semua tool gagal.
 apt-get install -y --no-install-recommends \
   git curl wget build-essential python3 python3-pip \
-  neofetch htop nano \
+  htop nano \
   nmap whois dnsutils \
   sqlmap nikto \
   hashcat john hydra \
@@ -29,4 +30,4 @@ for tool in nmap sqlmap nikto hashcat john hydra tcpdump binwalk gdb; do
 done
 
 echo "== Selesai =="
-echo "Coba: neofetch ; nmap --version ; pwd ; whoami"
+echo "Coba: nmap --version ; pwd ; whoami"
