@@ -1,0 +1,1 @@
+{"customizations":{"vscode":{"extensions":["ms-vscode.vscode-json"]}},"image":"kalilinux/kali-rolling","name":"Kali VPS (Codespace)","postCreateCommand":"bash .devcontainer/setup.sh","remoteUser":"root"}
